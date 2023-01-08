@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    // function <functionName>(argumnets1, arguments2, ...) {
+    //     content...
+
+    //     return <any>
+    // }
+
+    function getName(name) {
+        name = 'hello ' + name;
+
+        return name;
+    }
+
+    // <functionName>(value1, value2, ...);
+
+    let newName = getName('jony');
+
+    console.log(newName);
+
+    let getPow = (number, times = 2) => {
+        let result = number ** times;
+
+        console.log(result);
+
+        return result;
+    };
+
+    getPow(7);
+
+    let signleFunc = () => {
+        'hello'
+    }
+    // 无返回值，只有一个undefined
+    console.log(signleFunc());
+
+    
+    function getMax(num1, ...nums) {
+        console.log(nums);
+
+        return Math.max(...nums);
+    }
+
+    console.log(getMax(10, 20, 30, 40, 50));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 变量声明方式
+        var name = '123';
+
+        let name2 = 'abc';
+
+        var i = 3;
+        var loop = '123';
+        while (i) {
+            loop = loop + 1;
+
+            i -= 1;
+        }
+
+        var aa = 'value';
+        // console.log(loop);
+
+        const value = 'option1';
+
+        // 数据类型
+        // number
+        let a = 1;
+
+        // string
+        let b = '1';
+        let b2 = 'value';
+
+        console.log(a + b);
+        console.log(typeof b);
+        console.log(typeof Number(b));
+        console.log(a - b);
+        console.log(Number(b2));
+        console.log(isNaN(b2));
+        console.log(Infinity);
+        console.log(isNaN(-Infinity));
+        +b == Number(b);
+        '' + b == String(b);
+
+        // boolean Boolean()
+        let c = true; // false
+        !!b == Boolean(b);
+
+        // array 
+        let d = [];
+        let e = new Array(5);
+        console.log(d);
+        console.log(e);
+
+        // undefined null
+        let f;
+        let g = null;
+
+        // 条件运算符
+        // 逻辑运算符
+
+        // panduan
+        if (a > b) {
+            '1'
+        } else {
+            '2'
+        }
+
+        // if () {
+
+        // } else if () {
+
+        // } else {
+            
+        // }
+
+        // key === value
+        let key = 'value';
+
+        switch (key) {
+            case 'value':
+                break;
+            case 'value2':
+                break;
+            default:
+
+        }
+
+        let result = a > b ? '1' : '2';
+
+        // xunhuan
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+
+        let arr = [1,2,3];
+        for (let index in arr) {
+            console.log('k', index, arr[index]);
+        }
+
+        for (let value of arr) {
+            console.log('kk', value);
+        }
+
+        let j = 0;
+        while (j < 10) {
+            // ....
+            j++;
+        }
+
+        let m = 3;
+        console.log(2 * m++)
+        console.log(m)
+
+        // do {
+
+        // } while ();
+    </script>
+</body>
+</html>
