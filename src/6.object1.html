@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let key = 'newKey';
+    let obj = {}; // new Object();
+
+    let obj2 = {
+        name: 'value1',
+        key: 'value2',
+        ['obj-info']: 'obj value',
+
+        objKey1: 123,
+        objKey2: true,
+        objKey3: [1,2,3,4],
+        objKey4: {
+            subKey1: function () {
+
+            }
+        },
+        methodKey: undefined
+    };
+
+    obj2.attr = 'value3';
+    obj2[key] = 'new value';
+    obj2['obj-info2'] = '333';
+    console.log(obj2.attr);
+    console.log(obj2.objKey44?.subKey1); // undefined
+
+    delete obj2.name;
+
+    let json1 = JSON.stringify(obj2);
+    let parse1 = JSON.parse(json1);   //json =
+
+    // 简化写法
+    let obj3 = {
+        key
+    };
+
+    // {
+    //     key: key
+    // }
+
+    let arr1 = [
+        'a', 'b', 'c', 'd'
+    ];
+    
+    // 类数组
+    let obj4 = {
+        0: 'a',
+        1: 'b',
+        2: 'c',
+        3: 'd',
+        length: 4
+    };
+
+    // 类数组转真实数组
+    let obj2arr = Array.prototype.slice.call(obj4);
+
+    // 判断对象是否存在key
+    console.log('method1', obj2.methodKey != undefined);
+    console.log('method2', 'methodKey' in obj2);
+    console.log('method3', Object.prototype.hasOwnProperty.call(obj2, 'methodKey'));
+
+    // Object.prototype.a = '1111';
+
+    // 对象遍历
+    for (let key in obj2) {
+        // if (Object.prototype.hasOwnProperty.call(obj2, key)) {
+            console.log('loop1', key, '=', obj2[key]);
+        // }
+    }
+</script>
+</body>
+</html>
