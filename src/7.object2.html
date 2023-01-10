@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj1 = {
+            key1: 'value1',
+            key2: 'value2',
+            key3: [1,2,3,4]
+        };
+
+        let obj2 = obj1;
+// debugger;
+        // obj2.key1 = 'newValue1';
+
+        obj1 == obj2; // true
+
+        let obj3 = {
+            key1: 'value1',
+            key2: 'value2'
+        };
+
+        obj1 == obj3; // false
+
+        let obj4 = Object.assign({
+            key2: 'oldValue' // 删除
+        }, obj1, obj2, obj3);
+
+        // 语法糖 'abcd1234'  #'1234'    
+        // let target = {
+        //     key2: 'oldValue'
+        // };
+
+        // for (let key in obj1) {
+        //     target[key] = obj1[key];
+        // }
+
+        // for (let key in obj2) {
+        //     target[key] = obj2[key];
+        // }
+
+        obj4.key3 == obj1.key3; // true
+
+        const obj5 = {
+            name: 'value'
+        };
+
+        // obj5 = {
+        //     key: 'value'
+        // }; // error
+
+        obj5.key = 'value';
+    </script>
+
+    <!-- value = 'ab'
+    <div v-bind:name="value" v-on:change="value = 'abcd'">
+    <div v-model="value"> 语法糖
+
+        abcd ^^^^^
+    <div>{{name}}</div> -> <div>ab</div> -->
+</body>
+</html>
